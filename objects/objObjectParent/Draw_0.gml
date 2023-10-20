@@ -1,5 +1,8 @@
 /// @description Draw Object Depth
 
+draw_self();
+
+/*
 //Vertex arrays
 var topLeft, topRight, bottomLeft, bottomRight;
 

@@ -1,3 +1,7 @@
-/// @description Draw 3d Faces
+/// @description Draw 3D Faces
 
-vertex_submit(vBuffTop, pr_trianglelist, -1);
+if (visible) {
+	vertex_submit(vBuffTop, pr_trianglelist, textureTop);
+	vertex_submit(vBuffSides, pr_trianglelist, textureSides);
+	vertex_submit(vBuffBottom, pr_trianglelist, textureBottom);
+}

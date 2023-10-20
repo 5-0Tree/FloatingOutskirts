@@ -11,7 +11,7 @@ if (object_index != objPlayer) {
 	camCenter[Y] = cam_y + cam_h / 2;
 	
 	//Adjust depth by distance from center of camera
-	depth = point_distance(x, y, camCenter[X], camCenter[Y]) - (object_get_parent(object_index) == objPanelParent ? 1000 : 2000);
+	//depth = point_distance(x, y, camCenter[X], camCenter[Y]) - (object_get_parent(object_index) == objPanelParent ? 1000 : 2000);
 	
 	//**DEBUG MODE STUFF**
 	if (global.DEBUGMODE) {
@@ -27,7 +27,6 @@ if (object_index != objPlayer) {
 		}
 	}
 	
-	//Make object visible only within camera radius
-	if (object_get_parent(object_index))
-	visible = (point_distance(x, y, camCenter[X], camCenter[Y]) > max(global.VW + 64, global.VH + 64) ? false : true);
+	//Set object visibility
+	visible = visible_radius(x, y);
 }

@@ -471,5 +471,5 @@ jumpAmount = 7;			//Player jump timing
 deathFadeFX = 1;		//Opacity of death FX
 deathFadePos = 0;		//Position of death FX
 
-//Set on top
-depth = -3000;
+//Set proper depth
+depth = 16;

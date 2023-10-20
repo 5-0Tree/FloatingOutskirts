@@ -24,14 +24,7 @@ global.RH = global.VH * 10;
 room_width = global.RW;
 room_height = global.RH;
 
-//Set up camera
-view_enabled = true;
-view_camera[0] = camera_create_view(0, 0, global.VW, global.VH);
-view_set_visible(0, true);
-
-gpu_set_ztestenable(true);
-gpu_set_alphatestenable(true);
-gpu_set_texrepeat(true);
-
 //**DEBUG MODE**
-global.DEBUGMODE = false;
+global.DEBUGMODE = true;
+
+instance_create_layer(0, 0, "Control", objCamera);

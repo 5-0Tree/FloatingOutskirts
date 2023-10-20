@@ -1,7 +1,23 @@
 /// @description Manage Player Variables
 
+var _keyCheck = [
+	(global.DEBUGMODE ? keyboard_check(vk_up) : keyboard_check(vk_up) || keyboard_check(ord("W"))),
+	(global.DEBUGMODE ? keyboard_check(vk_left) : keyboard_check(vk_left) || keyboard_check(ord("A"))),
+	(global.DEBUGMODE ? keyboard_check(vk_down) : keyboard_check(vk_down) || keyboard_check(ord("S"))),
+	(global.DEBUGMODE ? keyboard_check(vk_right) : keyboard_check(vk_right) || keyboard_check(ord("D")))],
+	_keyCheckPressed = [
+	(global.DEBUGMODE ? keyboard_check_pressed(vk_up) : keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))),
+	(global.DEBUGMODE ? keyboard_check_pressed(vk_left) : keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))),
+	(global.DEBUGMODE ? keyboard_check_pressed(vk_down) : keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))),
+	(global.DEBUGMODE ? keyboard_check_pressed(vk_right) : keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")))],
+	_keyCheckReleased = [
+	(global.DEBUGMODE ? keyboard_check_released(vk_up) : keyboard_check_released(vk_up) || keyboard_check_released(ord("W"))),
+	(global.DEBUGMODE ? keyboard_check_released(vk_left) : keyboard_check_released(vk_left) || keyboard_check_released(ord("A"))),
+	(global.DEBUGMODE ? keyboard_check_released(vk_down) : keyboard_check_released(vk_down) || keyboard_check_released(ord("S"))),
+	(global.DEBUGMODE ? keyboard_check_released(vk_right) : keyboard_check_released(vk_right) || keyboard_check_released(ord("D")))];
+
 //Player direction: -1 = Left | 0 = Idle | 1 = Right
-faceDir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
+faceDir = (new dir_key_check(global.DEBUGMODE, vkR, wasdR).down - new dir_key_check(global.DEBUGMODE, vkL, wasdL).down);
 
 //Set isMoving variable appropriately
 isMoving = (abs(faceDir) > 0);
@@ -13,7 +29,7 @@ if (collision_line(x + 6, y + 20, x - 6, y + 20, objCollisionParent, true, true)
 }
 
 //Set isJumping variable when jump key is pressed...
-if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
+if (new dir_key_check(global.DEBUGMODE, vkU, wasdU).pressed) {
 	if (jumpCounter < availableJumps) {
 		
 		if (place_meeting(x, y + 4, objCollisionParent)) {
@@ -28,7 +44,7 @@ if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
 }
 
 //...stop jumping when jump key is released...
-if (keyboard_check_released(vk_up) || keyboard_check_released(ord("W"))) {
+if (new dir_key_check(global.DEBUGMODE, vkU, wasdU).released) {
 	isJumping = false;
 	jumpSlow = false;
 	alarm[0] = -1;

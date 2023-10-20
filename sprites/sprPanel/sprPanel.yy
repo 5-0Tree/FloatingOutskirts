@@ -11,7 +11,7 @@
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
-  "For3D": false,
+  "For3D": true,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5b07654-5cbb-4586-b09e-2bb3f45abb49",},
   ],
@@ -46,7 +46,7 @@
     ],
     "top": 4,
   },
-  "origin": 4,
+  "origin": 0,
   "parent": {
     "name": "Panel",
     "path": "folders/Sprites/Blocks/Panel.yy",
@@ -82,8 +82,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 32,
-    "yorigin": 32,
+    "xorigin": 0,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

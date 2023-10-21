@@ -1,6 +1,7 @@
 /// @description Init General Values
 
 //General object local variables
+importance = 0;			//Object importance level:		-1 = Most		| 0 = Low			| 1 = Mid			| 2 = High 
 faceDir = 0;			//Object direction value:		-1 = Left		| 0 = Neutral		| 1 = Right
 isMoving = false;		//Is the object moving:			false = Idle	| true = Moving
 isJumping = false;		//Is the object jumping:		false = No		| true = Yes

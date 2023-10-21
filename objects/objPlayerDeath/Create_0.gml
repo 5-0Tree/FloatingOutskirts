@@ -9,8 +9,8 @@ if (!variable_instance_exists(self, "deathFadeFX")) {
 }
 
 deathFrames = 6				//Total frames in death shard sprites
-deathMaxDistance = 16;		//Maximum distance shards can travel from center
-alarm[0] = 12;				//Time until FX fades
+deathMaxDistance = 32;		//Maximum distance shards can travel from center
+alarm[0] = 15;				//Time until FX fades
 
 image_speed = 0;
 image_angle = irandom(359);

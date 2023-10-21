@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ActiveConfig="Default" Platform="Windows" Runtime="VM" Device="Default">
+	<Desktop x="0" y="23" width="1920" height="1009" id="19" title="Floating Outskirts - GameMaker-Beta" windowState="Maximized">
+		<Workspaces>
+			<Workspace active="True" chain="True" title="Workspace 1" localise_title="" workspace_offset="[1066, 12096]" workspace_scale="1">
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objSolidParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="1973dpi_px" />
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprPlayerShardsSmall">
+						<WorkspaceChain left="297.99997dpi_px" top="5783dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprJumpRing">
+						<WorkspaceChain left="297.99997dpi_px" top="6415dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprEdgeTilesLevel1">
+						<WorkspaceChain left="464dpi_px" top="10297dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_tileset_editor">
+					<TileSetEditor tilesetId="tileEdgesLevel1" properties="true" brushbuilder="false" animation="false" autotile="true">
+						<WorkspaceChain left="297.99997dpi_px" top="8977dpi_px" />
+					</TileSetEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objCollisionParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="2573dpi_px" />
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="spr3DBlockPlaceholder">
+						<WorkspaceChain left="601dpi_px" top="13251dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_tileset_editor">
+					<TileSetEditor tilesetId="tileBlocksLevel1" properties="true" brushbuilder="false" animation="false" autotile="false">
+						<WorkspaceChain left="608dpi_px" top="13883dpi_px" />
+					</TileSetEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprBlockTexLevel1">
+						<WorkspaceChain left="2340.9993dpi_px" top="13493dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprBlock">
+						<WorkspaceChain left="3580.999dpi_px" top="13520dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeEdges">
+						<WorkspaceChain left="601dpi_px" top="21462dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="spr3DSpikePlaceholder">
+						<WorkspaceChain left="601dpi_px" top="20198dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeTexLevel1">
+						<WorkspaceChain left="601dpi_px" top="24150dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeLeft">
+						<WorkspaceChain left="601dpi_px" top="26166dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeDown">
+						<WorkspaceChain left="601dpi_px" top="26838dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeRight">
+						<WorkspaceChain left="601dpi_px" top="25494dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprPanel">
+						<WorkspaceChain left="608dpi_px" top="17553dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeUp">
+						<WorkspaceChain left="601dpi_px" top="24822dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeDownColMask">
+						<WorkspaceChain left="601dpi_px" top="27510dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeLeftColMask">
+						<WorkspaceChain left="601dpi_px" top="28182dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeRightColMask">
+						<WorkspaceChain left="601dpi_px" top="28854dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="open_sprite_editor">
+					<SpriteEditor SpriteEditor_Id="sprSpikeUpColMask">
+						<WorkspaceChain left="601dpi_px" top="29526dpi_px" />
+					</SpriteEditor>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\VertexBuffers\VertexBuffers.gml" resource="VertexBuffers" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="601dpi_px" top="10929dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="DocumentWindow_RestoreLayout" WorkspaceOwner="true">
+					<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1674dpi_px" h="600dpi_px">
+						<Script column="0" file="${project_dir}\scripts\MainScripts\MainScripts.gml" resource="MainScripts" overridden_title="False" view_readonly="False" />
+						<WorkspaceChain left="297.99997dpi_px" top="5153dpi_px" />
+					</DocumentWindow>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objDynamicParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="3173dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objObjectParent\Create_0.gml" resource="objObjectParent" subResource="0_0" overridden_title="False" view_readonly="True" />
+							<Script column="0" file="${project_dir}\objects\objDynamicParent\Step_0.gml" resource="objDynamicParent" subResource="3_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objHazardParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2608.0005dpi_px" top="2916dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objHazardParent\Create_0.gml" resource="objHazardParent" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objDeathBarrier" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="7047dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objDeathBarrier\Draw_0.gml" resource="objDeathBarrier" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objDeathBarrier\Create_0.gml" resource="objDeathBarrier" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objInvisibleBarrier" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="7677dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objInvisibleBarrier\Create_0.gml" resource="objInvisibleBarrier" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objSpikeRight" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="608dpi_px" top="15303dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objSpikeRight\Create_0.gml" resource="objSpikeRight" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objSpikeLeft" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="608dpi_px" top="15973dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objSpikeLeft\Create_0.gml" resource="objSpikeLeft" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objSpikeDown" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="2564.4998dpi_px" top="12594dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objSpikeDown\Create_0.gml" resource="objSpikeDown" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj3DSpike" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="true" activeWindow="parent">
+						<Options>
+							<Window left="0px" right="" top="320px" bottom="" width="100%" height="250dpi_px" flags="CloseButton, MinimizeButton, ResizeTop, ResizeBottom, DragDisabled, DockingDisabled, Bookmark" title="Variable Definitions" localise_title="ObjectEditor_InstPropsDefs" />
+							<Table columns="4" column_0="1.5*" column_1="1.5*" column_2="1*" column_3="57dpi_px" />
+						</Options>
+						<WorkspaceChain left="2564.4998dpi_px" top="11799dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="725dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj3DSpike\Create_0.gml" resource="obj3DSpike" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj3DSpike\Draw_0.gml" resource="obj3DSpike" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj3DSpike\CleanUp_0.gml" resource="obj3DSpike" subResource="12_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj3DSpike\Step_2.gml" resource="obj3DSpike" subResource="3_2" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objSpikeParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="true" activeWindow="physics">
+						<Options>
+							<Window left="0px" right="" top="590px" bottom="" width="100%" height="250dpi_px" flags="CloseButton, MinimizeButton, ResizeTop, ResizeBottom, DragDisabled, DockingDisabled, Bookmark" title="Variable Definitions" localise_title="ObjectEditor_InstPropsDefs" />
+							<Table columns="4" column_0="1.5*" column_1="1.5*" column_2="1*" column_3="57dpi_px" />
+						</Options>
+						<WorkspaceChain left="1018.00073dpi_px" top="2046dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1034dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objSpikeParent\Create_0.gml" resource="objSpikeParent" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objBlockParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="true" activeWindow="physics">
+						<Options>
+							<Window left="0px" right="" top="590px" bottom="" width="100%" height="250dpi_px" flags="CloseButton, MinimizeButton, ResizeTop, ResizeBottom, DragDisabled, DockingDisabled, Bookmark" title="Variable Definitions" localise_title="ObjectEditor_InstPropsDefs" />
+							<Table columns="4" column_0="1.5*" column_1="1.5*" column_2="1*" column_3="57dpi_px" />
+						</Options>
+						<WorkspaceChain left="608dpi_px" top="14393dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objBlockParent\Create_0.gml" resource="objBlockParent" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objPanelParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="true" activeWindow="physics">
+						<Options>
+							<Window left="0px" right="" top="590px" bottom="" width="100%" height="250dpi_px" flags="CloseButton, MinimizeButton, ResizeTop, ResizeBottom, DragDisabled, DockingDisabled, Bookmark" title="Variable Definitions" localise_title="ObjectEditor_InstPropsDefs" />
+							<Table columns="4" column_0="1.5*" column_1="1.5*" column_2="1*" column_3="57dpi_px" />
+						</Options>
+						<WorkspaceChain left="608dpi_px" top="16643dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objPanelParent\Create_0.gml" resource="objPanelParent" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objSpikeUp" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="8347dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objObjectParent\Draw_0.gml" resource="objObjectParent" subResource="8_0" overridden_title="False" view_readonly="True" />
+							<Script column="0" file="${project_dir}\objects\objSpikeUp\Create_0.gml" resource="objSpikeUp" subResource="0_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objObjectParent" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="297.99997dpi_px" top="3803dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="1594dpi_px" h="688dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objObjectParent\Create_0.gml" resource="objObjectParent" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objObjectParent\Step_2.gml" resource="objObjectParent" subResource="3_2" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objObjectParent\Draw_0.gml" resource="objObjectParent" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1167dpi_px" h="600dpi_px">
+								<Script column="0" file="${project_dir}\scripts\MainScripts\MainScripts.gml" resource="MainScripts" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objControl" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="297.99997dpi_px" top="1343dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1428dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objControl\Create_0.gml" resource="objControl" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objControl\Step_0.gml" resource="objControl" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objControl\KeyPress_82.gml" resource="objControl" subResource="9_82" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objPlayerDeath" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="2228.0012dpi_px" top="713dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1033dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objPlayerDeath\Create_0.gml" resource="objPlayerDeath" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayerDeath\Step_0.gml" resource="objPlayerDeath" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayerDeath\Draw_73.gml" resource="objPlayerDeath" subResource="8_73" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayerDeath\Alarm_0.gml" resource="objPlayerDeath" subResource="2_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayerDeath\Alarm_1.gml" resource="objPlayerDeath" subResource="2_1" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayerDeath\Draw_0.gml" resource="objPlayerDeath" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px">
+								<Script column="0" file="${project_dir}\scripts\MainScripts\MainScripts.gml" resource="MainScripts" overridden_title="False" view_readonly="False" />
+							</DocumentWindow>
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objPlayer" eventsOpen="true" parentOpen="true" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="physics">
+						<WorkspaceChain left="351.99997dpi_px" top="83dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="1276dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objPlayer\Create_0.gml" resource="objPlayer" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayer\Step_1.gml" resource="objPlayer" subResource="3_1" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayer\Step_0.gml" resource="objPlayer" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayer\Draw_73.gml" resource="objPlayer" subResource="8_73" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayer\Draw_0.gml" resource="objPlayer" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objPlayer\Destroy_0.gml" resource="objPlayer" subResource="1_0" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="objCamera" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="false" activeWindow="parent">
+						<WorkspaceChain left="601dpi_px" top="12621dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="1" isActive="False" w="1271dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\objCamera\Create_0.gml" resource="objCamera" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objCamera\Step_0.gml" resource="objCamera" subResource="3_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objCamera\Step_2.gml" resource="objCamera" subResource="3_2" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\objCamera\Draw_72.gml" resource="objCamera" subResource="8_72" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+				<Module Command="open_object_editor">
+					<ObjectEditor objectName="obj3DWall" eventsOpen="true" parentOpen="false" physicsOpen="false" physicsEditorOpen="false" propertiesOpen="true" activeWindow="parent">
+						<Options>
+							<Window left="0px" right="" top="320px" bottom="" width="100%" height="250dpi_px" flags="CloseButton, MinimizeButton, ResizeTop, ResizeBottom, DragDisabled, DockingDisabled, Bookmark" title="Variable Definitions" localise_title="ObjectEditor_InstPropsDefs" />
+							<Table columns="4" column_0="1.5*" column_1="1.5*" column_2="1*" column_3="57dpi_px" />
+						</Options>
+						<WorkspaceChain left="661dpi_px" top="11991dpi_px" />
+						<DocumentWindow columns="1" fullscreen="False" activeTab="0" isActive="False" w="900dpi_px" h="600dpi_px" linkIndex="-1">
+							<Script column="0" file="${project_dir}\objects\obj3DWall\Create_0.gml" resource="obj3DWall" subResource="0_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj3DWall\CleanUp_0.gml" resource="obj3DWall" subResource="12_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj3DWall\Draw_0.gml" resource="obj3DWall" subResource="8_0" overridden_title="False" view_readonly="False" />
+							<Script column="0" file="${project_dir}\objects\obj3DWall\Step_2.gml" resource="obj3DWall" subResource="3_2" overridden_title="False" view_readonly="False" />
+						</DocumentWindow>
+					</ObjectEditor>
+				</Module>
+			</Workspace>
+		</Workspaces>
+		<Dock state="Expanded" type="eLeft" restore_size="226.99998dpi_px" active_tab="0">
+			<DockTab title="Assets" cell_sizes="[634]" layout_id="dock_tab_1" layout_guid="5961ab98-060b-4445-9679-b77f97315e8c">
+				<Module Command="open_asset_browser">
+					<AssetBrowser sort="AtoZ" foldersFirst="True" zoom="100">
+						<Window left="" right="" top="" bottom="" width="370dpi_px" height="463dpi_px" flags="Default" title="Asset Browser" localise_title="AssetBrowser_Title" />
+					</AssetBrowser>
+				</Module>
+			</DockTab>
+		</Dock>
+		<Dock state="Expanded" type="eBottom" restore_size="245.99998dpi_px" active_tab="0">
+			<DockTab localise_title="OutputPanel_Output" cell_sizes="[1000]" layout_id="dock_tab_1" layout_guid="4ab783b3-5e8e-44b5-bd4e-2988d858c504">
+				<Module Command="open_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Output" localise_title="OutputPanel_Title" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="OutputPanel_SourceControl" cell_sizes="[1000]" layout_id="dock_tab_3" layout_guid="52b47f50-5ee8-4c96-9017-c781ca92db15">
+				<Module Command="open_sc_output_panel">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Source Control" localise_title="OutputPanel_SourceControl" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="Breakpoints" cell_sizes="[1000]" layout_id="dock_tab_4" layout_guid="ba4bad80-9f18-4de9-b8b5-989e9827ee4f">
+				<Module Command="open_breakpoint_mgr">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Breakpoints" localise_title="Breakpoints" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="CompileErrors" cell_sizes="[1000]" layout_id="dock_tab_5" layout_guid="d785ecf3-9768-42b6-becb-8260f24953bf">
+				<Module Command="show_compile_errors">
+					<Window left="0px" right="" top="0px" bottom="" width="900px" height="240px" flags="Default" title="Compile Errors" localise_title="CompileErrors" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="Feather_LintMessages_Title" cell_sizes="[1000]" layout_id="dock_tab_7" layout_guid="86eda3b3-e94f-4de3-929b-93a09d9c98e3">
+				<Module Command="feather_lint_messages_initialized">
+					<Window left="" right="" top="" bottom="" width="800px" height="600px" flags="Default" title="Feather Messages" localise_title="Feather_LintMessages_Title" />
+				</Module>
+			</DockTab>
+			<DockTab localise_title="OutputPanel_SearchResults" cell_sizes="[1000]" layout_id="dock_tab_6" layout_guid="385e0ad3-5e7f-4553-aa5a-d4331875e364">
+				<Module Command="open_search_output_panel">
+					<Window left="" right="" top="" bottom="" width="900dpi_px" height="240dpi_px" flags="Default" title="Search Results" localise_title="OutputPanel_SearchResults" />
+				</Module>
+			</DockTab>
+		</Dock>
+	</Desktop>
+	<Desktop x="1920" y="127" width="1920" height="1009" id="18" title="GameMaker-Beta" windowState="Maximized">
+		<Workspaces>
+			<Workspace active="True" chain="False" title="mainLevel" localise_title="" workspace_offset="[0, 0]" workspace_scale="1">
+				<Module Command="open_room_editor" WorkspaceOwner="true">
+					<Room id="mainLevel">
+						<RoomEditArea>
+							<PanArea zoom="0.84" pan="[64.08786, -2154.8447]" />
+							<Properties />
+							<Selected>
+								<Layer GUID="Instances" />
+							</Selected>
+						</RoomEditArea>
+					</Room>
+				</Module>
+			</Workspace>
+		</Workspaces>
+		<Dock state="Expanded" type="eLeft" restore_size="304dpi_px" active_tab="0">
+			<DockTab localise_title="AssetBrowser_Title" cell_sizes="[777]" layout_id="dock_tab_1" layout_guid="2d19a2f9-5c8c-42a3-b3f5-c139171bbd6f">
+				<Module Command="open_asset_browser">
+					<AssetBrowser sort="AtoZ" foldersFirst="True" zoom="100">
+						<Window left="-17px" right="" top="224px" bottom="" width="370dpi_px" height="463dpi_px" flags="Default" title="Asset Browser" localise_title="AssetBrowser_Title" />
+					</AssetBrowser>
+				</Module>
+			</DockTab>
+		</Dock>
+		<Dock state="Expanded" type="eRight" restore_size="361dpi_px" active_tab="0">
+			<DockTab localise_title="Inspector_WindowTitle" localise_arguments="[&quot;1&quot;]" cell_sizes="[385,614]" layout_id="dock_tab_2" layout_guid="836a526c-1a36-4dda-97ed-cd7247825a7d">
+				<Module Command="open_inspector">
+					<Inspector resName="objCamera">
+						<Window left="1832px" right="" top="562px" bottom="" width="340dpi_px" height="600dpi_px" flags="Default" title="Inspector: objCamera" localise_title="Inspector_WindowTitleArg" />
+					</Inspector>
+				</Module>
+			</DockTab>
+		</Dock>
+	</Desktop>
+	<Modules>
+		<YoYoStudio.Plugins.RoomEditor.RoomEditorModule>
+			<RoomEditor>
+				<Layers left="340dpi_px" right="" top="" bottom="270dpi_px" width="320dpi_px" height="200dpi_px" flags="CloseButton, MinimizeButton, ResizeButton" title="Layers - mainLevel" localise_title="RoomEditor_Layers" dock_type="eRight" dock_tab_index="0" dock_list_index="0" dock_proportion="0.77111113" dock_tab_name="Inspector" dock_tab_localise_name="Inspector_WindowTitle" dock_tab_localise_arguments="[&#xD;&#xA;    &quot;1&quot;&#xD;&#xA;]" dock_tab_id="dock_tab_2" dock_tab_guid="836a526c-1a36-4dda-97ed-cd7247825a7d" desktop="18" />
+			</RoomEditor>
+		</YoYoStudio.Plugins.RoomEditor.RoomEditorModule>
+		<YoYoStudio.Plugins.RoomEditor.Tools.RoomEditor_TileEditing>
+			<RoomEditor_TileEditing>
+				<TileSet left="" right="370dpi_px" top="125dpi_px" bottom="" width="450dpi_px" height="400dpi_px" flags="Default" title="Tiles - mainLevel" localise_title="RoomEditor_TileWindow" dock_type="eLeft" dock_tab_index="2" dock_list_index="0" dock_proportion="1" dock_tab_name="Room Editor" dock_tab_localise_name="RoomEditor_DockTab" dock_tab_id="room_editor_tab" dock_tab_guid="ebfdb187-d71c-4d23-b698-3428b1065919" desktop="18" />
+			</RoomEditor_TileEditing>
+		</YoYoStudio.Plugins.RoomEditor.Tools.RoomEditor_TileEditing>
+	</Modules>
+	<FoldRegions>
+		<FoldState docFile="objects/objPlayer/Create_0.gml" foldedRegions="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,68,69,74,79,84,85,90,95,100,101,106,111,116,117,118,119,120,121,122,123,124,125" />
+	</FoldRegions>
+</Project>

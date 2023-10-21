@@ -1,3 +1,3 @@
-/// @description Restart Level
+/// @description Remove Death Effect
 
-room_restart();
+instance_destroy();

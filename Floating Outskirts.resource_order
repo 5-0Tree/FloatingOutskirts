@@ -63,6 +63,7 @@
     {"name":"objHazardParent","order":4,"path":"objects/objHazardParent/objHazardParent.yy",},
     {"name":"objObjectParent","order":3,"path":"objects/objObjectParent/objObjectParent.yy",},
     {"name":"objBlockLevel1_3x3","order":2,"path":"objects/objBlockLevel1_3x3/objBlockLevel1_3x3.yy",},
+    {"name":"objSpawnPoint","order":2,"path":"objects/objSpawnPoint/objSpawnPoint.yy",},
     {"name":"sprSpikeUpColMask","order":3,"path":"sprites/sprSpikeUpColMask/sprSpikeUpColMask.yy",},
     {"name":"sprSpikeEdges","order":1,"path":"sprites/sprSpikeEdges/sprSpikeEdges.yy",},
     {"name":"objBlockParent","order":7,"path":"objects/objBlockParent/objBlockParent.yy",},

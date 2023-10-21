@@ -49,17 +49,17 @@ switch (image_angle) {
 	break;
 	case 270 :	//Pointing down
 	vertex_create_face(vBuffSides,
-		new Vec3(xx, y, zz),
-		new Vec3(hx, hy, zz),
 		new Vec3(hx, hy, z ),
-		new Vec3(xx, y, z ),
-		-1, 1, sprite_width, groundDepth);
-	vertex_create_face(vBuffSides,
-		new Vec3(x,  y,  zz),
+		new Vec3(xx, y,  z ),
+		new Vec3(xx, y,  zz),
 		new Vec3(hx, hy, zz),
+		c_gray, 1, sprite_width, groundDepth);
+	vertex_create_face(vBuffSides,
 		new Vec3(hx, hy, z ),
 		new Vec3(x,  y,  z ),
-		c_ltgray, 1, sprite_width, groundDepth);
+		new Vec3(x,  y,  zz),
+		new Vec3(hx, hy, zz),
+		c_gray, 1, sprite_width, groundDepth);
 	break;
 	case 0 :	//Pointing right
 	vertex_create_face(vBuffSides,
@@ -73,7 +73,7 @@ switch (image_angle) {
 		new Vec3(hx, hy, zz),
 		new Vec3(hx, hy, z ),
 		new Vec3(x,  y,  z ),
-		-1, 1, sprite_width, groundDepth);
+		c_ltgray, 1, sprite_width, groundDepth);
 	break;
 }
 

@@ -1,4 +1,4 @@
-
+//Initialize vertex buffers
 vertex_format_begin();
 
 vertex_format_add_position_3d();
@@ -36,6 +36,23 @@ function vertex_create_face(_vBuff, _p1, _p2, _p3, _p4, _color, _alpha, _width, 
 	
 	vertex_position_3d(_vBuff, _p4.x, _p4.y, _p4.z);
 	vertex_texcoord(_vBuff, 0, _texH);
+	vertex_color(_vBuff, _color, _alpha);
+}
+
+function vertex_create_outline(_vBuff, _color, _alpha) {
+	//Loop through points
+	for (var i = 0; i < argument_count - 4; i ++) {
+		vertex_position_3d(_vBuff, argument[3 + i].x, argument[3 + i].y, argument[3 + i].z);
+		vertex_texcoord(_vBuff, 0, 0);
+		vertex_color(_vBuff, _color, _alpha);
+		
+		vertex_position_3d(_vBuff, argument[4 + i].x, argument[4 + i].y, argument[4 + i].z);
+		vertex_texcoord(_vBuff, 0, 0);
+		vertex_color(_vBuff, _color, _alpha);
+	}
+	
+	vertex_position_3d(_vBuff, argument[3].x, argument[3].y, argument[3].z);
+	vertex_texcoord(_vBuff, 0, 0);
 	vertex_color(_vBuff, _color, _alpha);
 }
 

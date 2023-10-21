@@ -1,5 +1,12 @@
 /// @description Init Player Values
 
+//Make sure that there is only one player object
+if (instance_number(objPlayer) > 1) {
+	instance_destroy(self, false);
+	exit;
+}
+
+//Inherit the parent event
 event_inherited();
 
 //Player width & height
@@ -472,4 +479,4 @@ deathFadeFX = 1;		//Opacity of death FX
 deathFadePos = 0;		//Position of death FX
 
 //Set proper depth
-depth = 16;
+depth = -1;

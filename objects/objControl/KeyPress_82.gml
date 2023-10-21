@@ -1,3 +1,3 @@
-/// @description *Debug* Restart Room
+/// @description **DEBUG** - Restart Room
 
 room_restart();

@@ -1,9 +1,9 @@
 /// @description Adjust 3D Camera Movement
 
 //Keyboard variables shorthand
-var _u	 = keyboard_check(vk_space),
+var _u	 = mouse_wheel_up() * 4,
 	_l	 = keyboard_check(ord("A")),
-	_d	 = keyboard_check(vk_lcontrol),
+	_d	 = mouse_wheel_down() * 4,
 	_r	 = keyboard_check(ord("D")),
 	_run = keyboard_check(vk_shift),
 	_y_u = keyboard_check(ord("W")),
@@ -51,17 +51,31 @@ if (global.DEBUGMODE) {
 	}
 	
 	//Axes of movement
-	x		-= camSpeed * (_run + 1) * ((_r - _l) * dsin(direction) - (_u - _d) * dcos(direction));
+	x		+= camSpeed * (_run + 1) * ((_l - _r) * dsin(direction) + (_u - _d) * dcos(direction));
 	y		+= camSpeed * (_y_d - _y_u);
 	camDist += camSpeed * (_run + 1) * ((_l - _r) * dcos(direction) - (_u - _d) * dsin(direction));
+	
+	//Update scroll wheel checker
+	if (_u || _d) {
+		alarm[2] = 15;
+		scrollChk = false;
+	}
 } else {
 	//Constrain camera angles
 	direction = clamp(direction, 265, 275);
-	camPitch = clamp(camPitch, -5, 5);
+	camPitch  = clamp(camPitch, -5, 5);
 	
-	//Reset debug camera position
+	//Reset debug camera origin view
 	camDebugO[X] = camTweenTo[X];
 	camDebugO[Y] = camTweenTo[Y];
-	camDebugV[X] = camTweenTo[X];
-	camDebugV[Y] = camTweenTo[Y];
+	
+	//Reset debug camera current view
+	//camDebugC[X] = camTweenTo[X];
+	//camDebugC[Y] = camTweenTo[Y];
 }
+
+x = clamp(x, -global.VW / 2, global.RW);
+y = clamp(y, -global.VH / 2, global.RH);
+
+camDebugC[X] = clamp(camDebugC[X], -global.VW / 2, global.RW);
+camDebugC[Y] = clamp(camDebugC[Y], -global.VH / 2, global.RH);

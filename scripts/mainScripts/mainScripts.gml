@@ -1,6 +1,9 @@
+///TODO: rollback_define_input()
+
 //Macros
 #macro X 0
 #macro Y 1
+#macro Z 2
 #macro vkU vk_up
 #macro vkL vk_left
 #macro vkD vk_down
@@ -9,6 +12,24 @@
 #macro wasdL ord("A")
 #macro wasdD ord("S")
 #macro wasdR ord("D")
+
+//Editor-specific macros
+#macro GUI_EXPANDED true
+#macro GUI_COLLAPSED false
+#macro GUI_COL_PLACE #00FF00
+#macro GUI_COL_DELETE #FF0000
+#macro GUI_COL_SELECT #0080FF
+#macro GUI_COL_PROP #FF8000
+#macro GUI_COL_BUTTON_SEL #FFFFFF
+#macro GUI_COL_BUTTON_TOP #EDEDED
+#macro GUI_COL_BUTTON_BOT #101010
+#macro GUI_COL_TEXT #0A0A0A
+
+//**DEBUG MODE**
+global.DEBUGMODE = false;
+
+//Initial death count
+global.playerDeaths = 0;
 
 //Perform tweening events for player points
 function tween_points(from_struct, to_struct, amount) {
@@ -61,5 +82,81 @@ function visible_radius(_x, _y) {
 	camCenter[Y] = cam_y + cam_h / 2;
 	
 	//Make object visible only within camera radius
-	return (point_distance(_x, _y, camCenter[X], camCenter[Y]) > max(global.VW + 64, global.VH + 64) ? false : true);
+	return (point_distance(_x, _y, camCenter[X], camCenter[Y]) > max(cam_w * 2 + 64, cam_h * 2 + 64) ? false : true);
+}
+
+function screen_to_world(_x, _y, V, P) {
+	var mx	 = 2 * (_x / window_get_width() - 0.5) / P[0],
+		my	 = 2 * (_y / window_get_height() - 0.5) / P[5],
+		camX = -(V[12] * V[0] + V[13] * V[1] + V[14] * V[2]),
+		camY = -(V[12] * V[4] + V[13] * V[5] + V[14] * V[6]),
+		camZ = -(V[12] * V[8] + V[13] * V[9] + V[14] * V[10]);
+	
+	if (P[15] == 0) {
+		//This is a perspective projection
+	    return [V[2]  + mx * V[0] + my * V[1],
+				V[6]  + mx * V[4] + my * V[5],
+				V[10] + mx * V[8] + my * V[9],
+				camX,
+				camY,
+				camZ];
+	} else {
+		//This is an ortho projection
+	    return [V[2],
+				V[6],
+				V[10],
+				camX + mx * V[0] + my * V[1],
+				camY + mx * V[4] + my * V[5],
+				camZ + mx * V[8] + my * V[9]];
+	}
+}
+
+//Clear surface with alpha* and color*:		([alpha (*default = 1.0)], [color (*default = white)])
+// AND/OR option to set new surface target:	([surf], [alpha (*default = 1.0)], [color (*default = white)])
+function surf_set() {
+	switch (argument_count) {
+		case 0 :
+			draw_clear_alpha(#FFFFFF, 0.0);
+			draw_set_color(#FFFFFF);
+			draw_set_alpha(1.0);
+		break;
+		case 1 :
+			if (typeof(argument[0]) == "ref") {
+				surface_reset_target();
+				surface_set_target(argument[0]);
+				
+				draw_clear_alpha(#FFFFFF, 0.0);
+				draw_set_color(#FFFFFF);
+				draw_set_alpha(1.0);
+			} else {
+				draw_clear_alpha(#FFFFFF, 0.0);
+				draw_set_color(#FFFFFF);
+				draw_set_alpha(argument[0]);
+			}
+		break;
+		case 2 :
+			if (typeof(argument[0]) == "ref") {
+				surface_reset_target();
+				surface_set_target(argument[0]);
+				
+				draw_clear_alpha(#FFFFFF, 0.0);
+				draw_set_color(#FFFFFF);
+				draw_set_alpha(argument[1]);
+			} else {
+				draw_clear_alpha(#FFFFFF, 0.0);
+				draw_set_color(argument[1]);
+				draw_set_alpha(argument[0]);
+			}
+		break;
+		 case 3 :
+			if (typeof(argument[0]) == "ref") {
+				surface_reset_target();
+				surface_set_target(argument[0]);
+				
+				draw_clear_alpha(#FFFFFF, 0.0);
+				draw_set_color(argument[2]);
+				draw_set_alpha(argument[1]);
+			}
+		break;
+	}
 }

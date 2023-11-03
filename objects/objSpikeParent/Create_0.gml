@@ -4,8 +4,8 @@
 event_inherited();
 
 //Sprite and texture values
-image_index = spikeAngle;			//Spike texture
-edgeSprite	= sprSpikeEdges;		//Sprite for edges
+image_index = 1;				//Spike texture
+edgeSprite	= sprSpikeEdges;	//Sprite for edges
 
 //Sprite corresponding to angle
 angleSprite = [sprSpikeUp, sprSpikeLeft, sprSpikeDown, sprSpikeRight];
@@ -15,9 +15,7 @@ if (!variable_instance_exists(self, "init_angle")) {
 	init_angle = 0;
 }
 
-//Offset sprite according to angle
-//x -= lengthdir_x(sprite_width / 2, init_angle);
-//y -= lengthdir_y(sprite_height / 2, init_angle);
+image_angle = init_angle - 90;
 
 //Create 3D block with correct properties
 instance_create_layer(x, y, "Ground3D", obj3DSpike, {

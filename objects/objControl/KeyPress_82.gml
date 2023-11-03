@@ -1,3 +1,9 @@
-/// @description **DEBUG** - Restart Room
+/// @description **DEBUG** - Restart Room/Game
 
-room_restart();
+if (global.DEBUGMODE) {
+	if (keyboard_check(vk_shift)) {
+		game_restart();
+	} else {
+		room_restart();
+	}
+}

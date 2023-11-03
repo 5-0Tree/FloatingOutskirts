@@ -7,7 +7,7 @@ faceDir = (new dir_key_check(global.DEBUGMODE, vkR, wasdR).down - new dir_key_ch
 isMoving = (abs(faceDir) > 0);
 
 //Reset jumps when on a solid object
-if (collision_line(x + 6, y + 20, x - 6, y + 20, objCollisionParent, true, true) != noone) {
+if (collision_line(x + 10, y + 20, x - 10, y + 20, objCollisionParent, true, true) != noone) {
 	jumpCounter = 0;
 	dJumpTrigger = false;
 }
@@ -15,7 +15,6 @@ if (collision_line(x + 6, y + 20, x - 6, y + 20, objCollisionParent, true, true)
 //Set isJumping variable when jump key is pressed...
 if (new dir_key_check(global.DEBUGMODE, vkU, wasdU).pressed) {
 	if (jumpCounter < availableJumps) {
-		
 		if (place_meeting(x, y + 4, objCollisionParent)) {
 			jumpCounter ++;
 		} else /*if (TODO: Jump crystals...)*/ {

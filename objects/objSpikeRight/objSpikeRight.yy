@@ -35,8 +35,8 @@
     "path": "sprites/sprSpikeRight/sprSpikeRight.yy",
   },
   "spriteMaskId": {
-    "name": "sprSpikeRightColMask",
-    "path": "sprites/sprSpikeRightColMask/sprSpikeRightColMask.yy",
+    "name": "sprSpikeColMask",
+    "path": "sprites/sprSpikeColMask/sprSpikeColMask.yy",
   },
   "visible": true,
 }

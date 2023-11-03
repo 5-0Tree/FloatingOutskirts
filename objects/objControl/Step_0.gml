@@ -1,3 +1,8 @@
-/// @description Frame Counter Manager
+/// @description Remove Unwanted Objects
 
-global.frameCounter = (global.frameCounter < global.maxFrames ? global.frameCounter + 1 : 0);
+//Make sure that there is only one control object
+var _obj = instance_number(objControl);
+
+if (_obj > 1) {
+	instance_destroy(instance_find(objControl, _obj - 1), false);
+}

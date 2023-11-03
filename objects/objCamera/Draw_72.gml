@@ -9,7 +9,7 @@ var _viewMat = matrix_build_lookat(_camX, _camY, camDist,
 		_camX + (dcos(direction) + lookAt[X] / _camW / 2),
 		_camY - (dsin(camPitch) + lookAt[Y] / _camH / 2),
 		camDist - dsin(direction), 0, 1, 0),
-	_projMat = matrix_build_projection_perspective_fov(camFOV, camAsp, 1, 32000);
+	_projMat = matrix_build_projection_perspective_fov(camFOV, global.camAsp, 1, 32000);
 
 camera_set_view_mat(camera, _viewMat);
 camera_set_proj_mat(camera, _projMat);

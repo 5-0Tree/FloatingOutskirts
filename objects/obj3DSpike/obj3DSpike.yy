@@ -5,16 +5,20 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj3DParent","path":"objects/obj3DParent/obj3DParent.yy",},"propertyId":{"name":"groundDepth","path":"objects/obj3DParent/obj3DParent.yy",},"value":"60",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj3DParent","path":"objects/obj3DParent/obj3DParent.yy",},"propertyId":{"name":"groundOffset","path":"objects/obj3DParent/obj3DParent.yy",},"value":"2",},
+  ],
   "parent": {
-    "name": "Blocks",
-    "path": "folders/Objects/Blocks.yy",
+    "name": "3D",
+    "path": "folders/Objects/Blocks/3D.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj3DParent",
+    "path": "objects/obj3DParent/obj3DParent.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,10 +32,7 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"groundDepth","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"60","varType":1,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"groundOffset","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"2","varType":1,},
-  ],
+  "properties": [],
   "solid": false,
   "spriteId": {
     "name": "spr3DSpikePlaceholder",

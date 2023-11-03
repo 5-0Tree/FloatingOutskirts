@@ -3,7 +3,7 @@
 //Store correct varyFrames values in temp variable, then check if they can vary
 var _varyVar = variable_struct_get(varyFrames, stateStr),
 	_varyState = variable_struct_get(_varyVar, stateDir),
-	_canVary = (global.frameCounter % (30) == 0 ? true : false);
+	_canVary = (global.frameCounter % 30 == 0 ? true : false);
 
 //Store correct pointList values in temp variables
 var _pointVar = variable_struct_get(pointCoords, stateStr),

@@ -27,8 +27,8 @@
     "path": "folders/Rooms.yy",
   },
   "parentRoom": {
-    "name": "mainLevel",
-    "path": "rooms/mainLevel/mainLevel.yy",
+    "name": "initRoom",
+    "path": "rooms/initRoom/initRoom.yy",
   },
   "physicsSettings": {
     "inheritPhysicsSettings": true,

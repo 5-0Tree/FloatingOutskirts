@@ -49,7 +49,7 @@
   "origin": 0,
   "parent": {
     "name": "Panel",
-    "path": "folders/Sprites/Blocks/Panel.yy",
+    "path": "folders/Sprites/Panel.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,17 +1,56 @@
 /// @description Init Variables
 
-image_speed = 0;
-
-z = depth + groundOffset;
+//Inherit parent event
+event_inherited();
 
 //Vertex coordinates shorthand
-var xx = x + sprite_width,
-	yy = y + sprite_height,
-	zz = z + groundDepth,
-	hx = x + sprite_width / 2,
-	hy = y + sprite_height / 2,
-	hz = z + groundDepth / 2;
+var hx = sprite_width / 2,
+	hy = sprite_height / 2,
+	x1 = -hx,
+	y1 = -hy,
+	x2 = hx,
+	y2 = hy,
+	zz = groundDepth;
 
+//Bottom vertex buffer
+vBuff[0] = vertex_create_buffer();
+texture[0] = sprite_get_texture(sprSpikeEdges, 1);
+
+vertex_begin(vBuff[0], global.vFormat);
+
+vertex_create_face(vBuff[0],
+	new Vec3(x1, y2, zz),
+	new Vec3(x2, y2, zz),
+	new Vec3(x2, y2, 0 ),
+	new Vec3(x1, y2, 0 ),
+	c_ltgray, 1, sprite_width, groundDepth);
+
+vertex_end(vBuff[0]);
+vertex_freeze(vBuff[0]);
+
+//Sides vertex buffer
+vBuff[1] = vertex_create_buffer();
+texture[1] = sprite_get_texture(sprSpikeEdges, 0);
+
+vertex_begin(vBuff[1], global.vFormat);
+
+vertex_create_face(vBuff[1],
+	new Vec3(x1, y2, zz),
+	new Vec3(0,  0,  zz),
+	new Vec3(0,  0,  0 ),
+	new Vec3(x1, y2, 0 ),
+	-1, 1, sprite_width, groundDepth);
+vertex_create_face(vBuff[1],
+	new Vec3(x2, y2, zz),
+	new Vec3(0,  0,  zz),
+	new Vec3(0,  0,  0 ),
+	new Vec3(x2, y2, 0 ),
+	-1, 1, sprite_width, groundDepth);
+
+vertex_end(vBuff[1]);
+vertex_freeze(vBuff[1]);
+
+/*Old buffers:
 //Sides vertex buffer
 vBuffSides = vertex_create_buffer();
 textureSides = sprite_get_texture(sprSpikeEdges, 0);
@@ -31,7 +70,7 @@ switch (image_angle) {
 		new Vec3(hx, hy, zz),
 		new Vec3(hx, hy, z ),
 		new Vec3(xx, yy, z ),
-		c_ltgray, 1, sprite_width, groundDepth);
+		-1, 1, sprite_width, groundDepth);
 	break;
 	case 180 :	//Pointing left
 	vertex_create_face(vBuffSides,
@@ -45,7 +84,7 @@ switch (image_angle) {
 		new Vec3(hx, hy, zz),
 		new Vec3(hx, hy, z ),
 		new Vec3(xx, yy, z ),
-		c_gray, 1, sprite_width, groundDepth);
+		-1, 1, sprite_width, groundDepth);
 	break;
 	case 270 :	//Pointing down
 	vertex_create_face(vBuffSides,
@@ -53,13 +92,13 @@ switch (image_angle) {
 		new Vec3(xx, y,  z ),
 		new Vec3(xx, y,  zz),
 		new Vec3(hx, hy, zz),
-		c_gray, 1, sprite_width, groundDepth);
+		-1, 1, sprite_width, groundDepth);
 	vertex_create_face(vBuffSides,
 		new Vec3(hx, hy, z ),
 		new Vec3(x,  y,  z ),
 		new Vec3(x,  y,  zz),
 		new Vec3(hx, hy, zz),
-		c_gray, 1, sprite_width, groundDepth);
+		-1, 1, sprite_width, groundDepth);
 	break;
 	case 0 :	//Pointing right
 	vertex_create_face(vBuffSides,
@@ -67,16 +106,15 @@ switch (image_angle) {
 		new Vec3(hx, hy, zz),
 		new Vec3(hx, hy, z ),
 		new Vec3(x,  yy, z ),
-		c_gray, 1, sprite_width, groundDepth);
+		-1, 1, sprite_width, groundDepth);
 	vertex_create_face(vBuffSides,
 		new Vec3(x,  y,  zz),
 		new Vec3(hx, hy, zz),
 		new Vec3(hx, hy, z ),
 		new Vec3(x,  y,  z ),
-		c_ltgray, 1, sprite_width, groundDepth);
+		-1, 1, sprite_width, groundDepth);
 	break;
 }
-
 
 vertex_end(vBuffSides);
 vertex_freeze(vBuffSides);
@@ -94,7 +132,7 @@ switch (image_angle) {
 		new Vec3(xx, yy, zz),
 		new Vec3(xx, yy, z ),
 		new Vec3(x,  yy, z ),
-		c_gray, 1, sprite_width, groundDepth);
+		c_ltgray, 1, sprite_width, groundDepth);
 	break;
 	case 180 :	//Right base (pointing left)
 	vertex_create_face(vBuffBase,
@@ -110,7 +148,7 @@ switch (image_angle) {
 		new Vec3(xx, y, zz),
 		new Vec3(xx, y, z ),
 		new Vec3(x,  y, z ),
-		-1, 1, sprite_width, groundDepth);
+		c_ltgray, 1, sprite_width, groundDepth);
 	break;
 	case 0 :	//Left base (pointing right)
 	vertex_create_face(vBuffBase,
@@ -118,49 +156,9 @@ switch (image_angle) {
 		new Vec3(x,  y,  z ),
 		new Vec3(x,  yy, z ),
 		new Vec3(x,  yy, zz),
-		c_gray, 1, groundDepth, sprite_height);
+		c_ltgray, 1, groundDepth, sprite_height);
 	break;
 }
 
 vertex_end(vBuffBase);
 vertex_freeze(vBuffBase);
-
-//Face vertex buffer
-//vBuffFace = vertex_create_buffer();
-//textureFace = sprite_get_texture(sprite_index, 0);
-//
-//vertex_begin(vBuffFace, global.vFormat);
-//
-//switch (image_angle) {
-//	case 90 :	//Pointing up
-//	vertex_create_triangle(vBuffFace,
-//		new Vec3(x,  yy, z ),
-//		new Vec3(hx, hy, z ),
-//		new Vec3(xx, yy, z ),
-//		-1, 1, sprite_width, groundDepth);
-//	break;
-//	case 180 :	//Pointing left
-//	vertex_create_triangle(vBuffFace,
-//		new Vec3(xx, yy, z ),
-//		new Vec3(hx, hy, z ),
-//		new Vec3(xx, y,  z ),
-//		-1, 1, groundDepth, sprite_height);
-//	break;
-//	case 270 :	//Pointing down
-//	vertex_create_triangle(vBuffFace,
-//		new Vec3(x,  y,  z ),
-//		new Vec3(hx, hy, z ),
-//		new Vec3(xx, y,  z ),
-//		-1, 1, sprite_width, groundDepth);
-//	break;
-//	case 0 :	//Pointing right
-//	vertex_create_triangle(vBuffFace,
-//		new Vec3(x,  y,  z ),
-//		new Vec3(hx, hy, z ),
-//		new Vec3(x,  yy, z ),
-//		-1, 1, groundDepth, sprite_height);
-//	break;
-//}
-//
-//vertex_end(vBuffFace);
-//vertex_freeze(vBuffFace);
